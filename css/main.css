@@ -1,0 +1,474 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::selection,:--moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+    /*Internet Explorer Fixex
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    
+} 
+
+    Mozilla Firefox Fixex
+@-moz-document url-prefix(){
+    
+}*/
+
+/*-----------------------*/ 
+/*---------START---------*/ 
+/*-----MEDIA QUERIES-----*/
+/*-----------------------*/ 
+@media screen and (max-width:2000px){/*updated to 2000 for mobile view across all viewports*/
+    html header h1 {width:100%;margin:0;margin-bottom:25px;}
+    body{margin-top:50px;}
+    html header nav{text-align:center;}
+    button.next{right:100px;}
+    button.previous{left:100px;}
+}
+@media screen and (max-width:1000px){
+    html body{width:900px;}
+    html body header nav{float:none;height:inherit;}
+    html header {height:200px;}
+    body div.gallery{max-width:500px;position:relative;}
+    body div.container {max-width:400px;}
+    button.next{right:5px;}
+    button.previous{left:5px;}
+}
+@media screen and (max-width:900px){ 
+    html body{max-width:100%;}
+}
+@media screen and (max-width:800px){
+    html body{width:500px;}
+    body nav ul li {font-size:1em;width:25%;}
+    html body header nav {float:none;width:100%;margin:0;line-height:inherit;text-align:center;height:auto;}
+    html header h1{width:100%;float:none;margin:0;}
+    html header {height:150px;margin:0;}
+}
+@media screen and (max-width:500px){
+    body div.gallery{max-width:100%;position:relative;height:auto!important;}
+    body div.container {max-width:330px;height:424px;}
+    div.gallery button{height:340px;font-size:40px;}
+    html body{width:100%;}
+    body .container img {height:340px!important;}
+    body header h1 img {object-position:inherit;object-fit:scale-down;width:70%;}
+    #contact-area label,body #contact-area input,body #contact-area textarea{font-size:15px;}
+    body nav ul li {margin:9px;}
+    div.bio p {font-size:16px;}
+   
+}   
+@media screen and (max-width:375px){
+    html body, header h1{width:100%;}
+    html header {height:110px;margin:0;}
+    body header h1 a /*img*/ {width:50%;height:auto!important;}
+    header h1{font-size:1.6em;}
+    nav ul li {display:inline;margin:20px;}
+    body ul li{margin:8px;}
+    .main-nav > li:nth-of-type(1){position:relative;}
+    h3{margin:0;padding:0;margin-bottom:20px;}
+    ul.main-nav a{font-size:12px;}
+    html header {height:120px;}
+
+}
+@media screen and (max-width:320px){
+    ul.main-nav a{font-size:11px;}
+}
+
+/*Landscape iPhone 6 Plus and lower (736px and lower)*/
+@media screen and (max-width:736px){
+html body{margin-top:0;}
+}
+
+/*800px and lower*/
+@media screen and (max-width:800px){
+    article img{width:90%;height:auto;transition:.5s;-webkit-transition:.5s;margin-left:auto;margin-right:auto;display:block;}
+}
+   
+   /*Font Family - Futura Condensed Light*/
+@font-face {
+    font-family: ;/*'FuturaCondensedLight'; font compatible in all browsers*/
+    src: ;/*url('../fonts/FuturaStd-CondensedLight.woff'); format('woff');*/
+    font-weight: normal;
+    font-style: normal;
+}
+/*-----------------------*/ 
+/*----------END----------*/ 
+/*-----MEDIA QUERIES-----*/
+/*-----------------------*/ 
+
+
+
+
+
+    /*Body Edits*/
+header{
+        position:relative;height:140px;margin-left:-20px;
+        height:200px;
+        font-family: FuturaCondensedLight, Futura, "Trebuchet MS", Arial, sans-serif;
+    }
+body{
+    font-family:Helvetica;
+    font-weight:bold;
+    text-transform:uppercase;
+    max-width:1500px;
+    width:1000px;
+    margin: 0 auto;
+    }
+nav a {font-family:Helvetica;}
+nav{x-overflow:none;}
+    
+/*-----------------------*/ 
+/*---------START---------*/ 
+/*----GALLERY CHANGES----*/
+/*-----------------------*/ 
+div.gallery{
+    max-width:1000px;
+    height:500px;
+    margin:0 auto;
+    position:relative;
+}
+.container{
+    max-width:900px;
+    height:634px;
+    background-color:transparent;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+}
+.container div{
+    background-color:transparent;
+    width:100%;
+    display:inline-block;
+    display:none;
+}
+.container img{
+    object-position:inherit;
+    width:100%;
+    height:550px!important;
+    object-fit:scale-down;
+}
+button{
+    position:absolute;
+    font-size:30px;
+    z-index:999999;
+    height:550px;
+    line-height:100%;
+    background-color:transparent;
+    font-size:50px;
+    border:none;
+    transition:.5s;
+    -webkit-transition: .5s;
+    text-shadow: -1px 0 #ACC5C2, 0 1px #ACC5C2, 1px 0 #ACC5C2, 0 -1px #ACC5C2;
+}
+button:focus{
+    outline:none;
+}
+button:hover{
+    color:#ACC5C2;
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.next{
+    right:5px;
+}
+.previous{
+    left:5px;
+}
+p{margin:0;}
+span{display:block; border: solid transparent;}
+div.container p span:first-of-type{display:inline;font-style:italic;}
+div.container p span:last-of-type{padding-top:10px; display:block;font-size:10px;font-weight:normal;}
+div.container p{font-size:14px;margin-top:10px;}
+/*-----------------------*/ 
+/*----------END----------*/ 
+/*----GALLERY CHANGES----*/
+/*-----------------------*/ 
+
+
+div.container span:nth-of-type(1){margin-top:50px}
+div.container span {text-align:center;}
+
+    /*Link Edits*/
+ header nav ul a.active{color:#ACC5C2;outline:none;}
+ 
+ a{transition:.3s;-webkit-transition:.3s;} 
+ a, a:visited{text-decoration:none;color:black;}
+ a:hover{color:#ACC5C2}
+ 
+    /*Header updates*/
+ h1, h2,h3{text-align:center;}
+ h2{font-size:1.6em;margin-top:40px;}
+ header h1 img{width:auto;/*height:110px;jinx*/line-height:110px;}
+ header h1{float:left;}
+
+    /*Nav Edits*/
+ol, ul {padding:0;margin:0;}
+
+ul li {display:inline;margin:20px;font-size:1.6em;}
+
+
+    /*Article Edits*/
+div.bio,div.contact-area p{font-weight:normal;text-transform:initial;margin:0px 30px;font-size:1.4em;;float:left;}*/
+form{margin-left:60px;margin-right:60px;box-sizing:border-box;}
+div.bio p {margin-bottom:20px;}
+div.bio img,div.contact img {width:100%;height:auto!important;}
+div.contact{margin-top:-8px;margin:0 auto;margin-left:30px;margin-right:30px;}
+.bio h2 {font-size:20px;}
+
+    /*Social Links*/
+a.social-link img{/*display:none*/;width:25px;height:auto!important;float:right;margin-top:-20px;margin-right:5px;opacity:.7;transition:.5s;-webkit-transition:.5s;}
+a.social-link img:hover{opacity:1;}
+
+    
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+
+div.thanksmessage{text-align:center;font-family:Helvetica;}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Placeholder Text Style*/
+::-webkit-input-placeholder,:-moz-placeholder,::-moz-placeholder,:ms-input-placeholder{font-size:15px;font-family:Helvetica;}
+
+.submit-button:hover{background-color:#ACC5C2;}
+.submit-button{transition:.3s;-webkit-transition:.3s;}
+
+
+#contact-page {
+    text-align:center;
+    margin: 0 auto;
+    height: auto !important;
+}
+
+
+#contact-area {
+    width: 100%;
+    
+}
+
+
+label, h2 {font-family:Helvetica;font-size:20px;}
+#contact-area input, #contact-area textarea {
+    padding: 0px 10px;
+    width:100%;
+    font-family: Helvetica;
+    font-size: 1.4em;
+    margin: 0px 0px 0px 0px;
+    border: 2px solid #ccc;
+    box-sizing:border-box;
+    outline:none;
+}
+input:focus,textarea:focus{
+    border: 2px solid #ACC5C2!important; 
+}
+
+#contact-area textarea {
+    height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+    border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+    font-family: Helvetica;
+    margin-top:10px;
+    margin-bottom:30px;
+    width: 100px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+label {
+    display:block;
+    text-align: left;
+    width: 100px;
+    padding-top: 5px;
+    padding-left:13px;
+    font-size: 1.4em;
+}

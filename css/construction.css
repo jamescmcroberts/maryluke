@@ -1,0 +1,394 @@
+.construction{max-width:800px;margin:0 auto;margin-top:25px;}
+
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::selection,:--moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+    width:100%;
+    height:100%!important;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+	/*Internet Explorer Fixex
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	
+} 
+
+	Mozilla Firefox Fixex
+@-moz-document url-prefix(){
+	
+}*/
+@media screen and (max-width:500px){
+	html header{height:100%;}
+	html section.gallery {margin-top:0;}
+}
+
+@media screen and (max-width:2000px){/*updated to 2000 for mobile view across all viewports*/
+	html header{height:100%;margin:0;margin-left:0;}
+	html header h1 {float:none;margin:0;}
+	body{margin-top:50px;}
+	html header nav{position:relative;float:none;}
+}
+	/*Screen Adjustments*/
+	/*Portrait iPhone 6 (375px and lower)*/
+@media screen and (max-width:375px){
+	html body, header h1{width:100%;}
+	body header h1 img {width:100%;}
+	header h1{font-size:1.6em;}
+	nav ul li {display:inline;margin:20px;}
+	body ul li{margin:8px;}
+	.main-nav > li:nth-of-type(1){position:relative;}
+	ul.sub-nav {position:absolute;text-align:left;left:0px;}
+	ul.sub-nav li {display:block;}
+	section article,section article.drawings,section article.sketchbooks,section article.paintings{width:100%;margin-top:10px;margin-bottom:0;}
+	section article img{width:250px;height:auto;margin-bottom:30px;}
+	h3{margin:0;padding:0;margin-bottom:20px;}
+	body section p{margin:10px;}
+	
+
+}
+
+
+@media screen and (max-width:463px){
+	nav ul li {font-size:1em;}
+	body header h1 img {max-width:100%;}
+}
+
+
+/*Landscape iPhone 6 Plus and lower (736px and lower*/
+@media screen and (max-width:736px){
+html body{margin-top:0;}
+}
+
+/*800px and lower*/
+@media screen and (max-width:800px){
+	article img{width:90%;height:auto;transition:.5s;-webkit-transition:.5s;margin-left:auto;margin-right:auto;display:block;}
+}
+   
+   /*Font Family - Futura Condensed Light*/
+@font-face {
+    font-family: 'FuturaCondensedLight'; /*font compatible in all browsers*/
+	src: url('../fonts/FuturaStd-CondensedLight.woff'); format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+	/*Body Edits*/
+	header{position:relative;height:140px;margin-left:-20px}
+body{
+	font-family:FuturaCondensedLight, Futura, "Trebuchet MS", Arial, sans-serif;
+	font-weight:bold;
+	text-transform:uppercase;
+	max-width:1500px;
+	width:100%;
+	margin: 0 auto;
+	
+	}
+	
+
+html{overflow-y:scroll; overflow: -moz-scrollbars-vertical;}
+ul.main-nav a,ul.main-nav a:active {outline:none;}
+	
+/*section.image-gallery img{max-width:100%;width:31.3%;float:left;margin:10px;height:auto;}*/
+section.image-gallery{-moz-column-count:3;-moz-column-gap:10px;-webkit-column-count:3;-webkit-column-gap:10px;column-count:3;column-gap:10px;max-width:1500px;width:100%;}	
+section#columns-2{-moz-column-count:2;-moz-column-gap:10px;-webkit-column-count:2;-webkit-column-gap:10px;column-count:2;column-gap:10px;max-width:1500px;width:100%;}  
+section.image-gallery a {display:inline-block;margin-bottom:10px;width:100%;}
+section.image-gallery a img{width:100%;}
+section.image-gallery a:hover img{filter:gray;-webkit-filter:grayscale(50%);transition:.2s;-webkit-transition:.2s;-moz-transition:.2s;}
+section.image-gallery a {-webkit-backface-visibility:hidden;}
+section.gallery article a img{-webkit-backface-visibility:hidden;}
+section.homepage-image img{max-width:100%; height:auto!important;max-height:650px;}
+section.homepage-image{text-align:center;}
+
+section.gallery article.paintings h3 {margin-top:9px;}
+
+/*lightbox fix*/
+html body #ui-lightbox-content>* {width:auto!important;}
+ 
+	/*Link Edits*/
+ header nav ul a.active, header nav ul li.active a{color:#ACC5C2}
+ .active{color:#ACC5C2;}
+ a{transition:.3s;-webkit-transition:.3s;} 
+ a, a:visited{text-decoration:none;color:black;}
+ a:hover{color:#ACC5C2}
+ 
+	/*Header updates*/
+ h1, h2,h3{text-align:center;}
+ h2{font-size:1.6em;margin-top:40px;}
+ header h1 img{width:500px;height:auto;}
+ header h1{float:left;}
+
+	/*Nav Edits*/
+ol, ul {padding:0;margin:0;}
+nav{position:absolute;right:0;bottom:0;text-align:center;}
+ul li {display:inline;margin:20px;font-size:1.6em;}
+.main-nav > li:nth-of-type(1){position:relative;}
+/*.main-nav > li:nth-of-type(1):hover .sub-nav{Display:block;margin-left:-5px;padding-left:5px;}*/
+.main-nav > li:nth-of-type(1):hover, .sub-nav:hover {color:#ACC5C2;}
+.sub-nav {display:none;position:absolute;text-align:left;left:0;background-color:white;z-index:9999;}
+.sub-nav li{display:block;z-index:9999;width:150px;margin:10px 0;opacity:1;font-size:1em;}
+
+	/*Article Edits*/
+article{width:33.333%;display:inline;float:left;margin-bottom:30px;}
+article img{width:90%;height:auto;transition:.5s;-webkit-transition:.5s;margin-left:auto;margin-right:auto;display:block;}
+article img:hover{opacity:.7;}
+article.drawings,article.sketchbooks,article.paintings{width:49.333%;}
+section.gallery > article.sketchbooks:nth-child(10),body > section.gallery > article:nth-child(5){float:none;width:100%;}/*floats singular gallery icons in row to be centered, larger in size*/
+div#content{display:none;}
+section p{font-weight:normal;text-transform:initial;margin:0px 30px;font-size:1.4em;;float:left;}
+form{margin-left:60px;margin-right:60px;box-sizing:border-box;}
+section{position:absolute;max-width:1500px;width:100%;margin-top:20px;}
+
+section.bio p {margin-bottom:30px;}
+
+
+div.construction{text-align:center;}
+div.construction img {padding:20px;box-sizing:border-box;}
+	
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Placeholder Text Style*/
+::-webkit-input-placeholder,:-moz-placeholder,::-moz-placeholder,:ms-input-placeholder{font-family:FuturaCondensedLight;}
+
+.submit-button:hover{background-color:gray;}
+.submit-button{transition:.3s;-webkit-transition:.3s;}
+
+
+#contact-page {
+	text-align:center;
+	margin: 0 auto;
+	height: auto !important;
+}
+
+
+#contact-area {
+	width: 100%;
+	
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px 10px;
+	width: 99%;
+	font-family: FuturaCondensedLight, Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 0px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+    font-family: FuturaCondensedLight, Futura, "Trebuchet MS", Arial, sans-serif;
+	margin-top:10px;
+    margin-bottom:30px;
+	width: 100px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+label {
+	float: left;
+	text-align: center;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}

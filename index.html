@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="">
+    <head>
+        <title>Mary Luke Artworks</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="keywords" content="Mary-Luke, Mary-Catherine-Luke, Mary-C.-Luke, Mary-Luke-Art, James-McRoberts, James-C-McRoberts, mcluke1202@gmail.com, 4mcroberts@gmail.com, james.mcroberts@mlb.com, McRoberts, James McRoberts, Mary Luke, Mary Catherine Luke, James C McRoberts, James C. McRoberts">
+		<meta name="description" content="Official website of Mary Luke Artwork. Last Update: 4/10/2017">
+		<meta name="author" content="James C. McRoberts">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="icon" href="images/gallery/favicon.jpg" type="image/jpg">
+		
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
+	
+		<style>li.active{color:#ACC5C2}</style>		
+		
+<!--BEGIN SCRIPTS SECTION-->
+		<script>
+		$(document).ready(function(){
+			<!--Done Loading-->
+			console.log("Welcome to Mary Luke Artwork");
+//BEGIN HIDE BIO/CONTACT ON PAGELOAD
+			$("div.bio,div.contact").hide();
+			$("a.gallery").addClass("active")
+//////////////////////////////////////////
+//				Nav Clicks 				//
+//////////////////////////////////////////
+//BEGIN DISPLAY GALLERY SECTION ON NAV CLICK
+			$("a.gallery").click(function(e){
+				$("div.bio,div.contact").hide();
+				$("div.gallery").show();
+				$(this).addClass("active"); 
+				$("a.bio,a.contact").removeClass("active"); 
+			})
+//BEGIN DISPLAY BIO SECTION ON NAV CLICK
+			$("a.bio").click(function(e){
+				$("div.gallery,div.contact").hide();
+				$("div.bio").show();
+				$(this).addClass("active"); 
+				$("a.gallery,a.contact").removeClass("active"); 
+			})
+//BEGIN DISPLAY CONTACT SECTION ON NAV CLICK
+			$("a.contact").click(function(e){
+				$("div.gallery,div.bio").hide();
+				$("div.contact").show();
+				$(this).addClass("active"); 
+				$("a.gallery,a.bio").removeClass("active"); 
+			})
+//BEGIN IMAGE CAROUSEL VARIABLES
+	var currentIndex = 0,
+	items = $('.container div'),
+	itemAmt = items.length;
+
+	function cycleItems() {
+		var item = $('.container div').eq(currentIndex);
+		items.hide();
+		item.css('display','inline-block');
+	}
+//BEGIN AUTOSCROLL AFTER 10S (10000ms)
+	var autoSlide = setInterval(function() {
+ 		currentIndex += 1;
+ 			if (currentIndex > itemAmt - 1) {
+   			currentIndex = 0;
+  			}
+  		cycleItems();
+	}, 10000);
+//BEGIN CONSOLE CALL TO DISPLAY CURRENT TOTAL OF IMAGES IN ARRAY
+		console.log("There are " + itemAmt + " images in this carousel. Displaying IMG #1")
+		//Test Pop-up// alert("There are " + itemAmt + " images in this carousel")
+
+//BEGIN IMAGE CAROUSEL FUNCTIONS FOR NEXT
+	$('.next').click(function() {
+		console.log("Clicked Next, displaying IMG # " + (currentIndex+2)) /*needs work*/
+		//This ^^^^^^ needs fixing
+  		clearInterval(autoSlide);
+  		currentIndex += 1;
+  			if (currentIndex > itemAmt - 1) {
+    		currentIndex = 0;
+  			}
+  		cycleItems();
+	});
+//BEGIN IMAGE CAROUSEL FUNCTIONS FOR PREVIOUS
+	$('.previous').click(function() {
+		console.log("Clicked Previous, displaying IMG # " + (currentIndex-2)) /*needs work*/
+		//This ^^^^^^ needs fixing
+  		clearInterval(autoSlide);
+  		currentIndex -= 1;
+  			if (currentIndex < 0) {
+    		currentIndex = itemAmt - 1;
+  			}
+  		cycleItems();
+	});
+
+//BEGIN SCRIPT END BRACKETS
+	});
+</script>
+
+	</head>
+<!--BEGIN BODY-->
+	<body>
+<!--BEGIN HEADER-->
+		<header>
+			<h1> <a href="index.html"><img src="images/gallery/Header.png" alt="Mary Luke Artworks"/></a></h1>
+			<nav>
+				<ul class="main-nav">
+					<li><a class="gallery" href="#">Gallery</a></li>
+					<li><a class="bio" href="#">Artist Bio</a></li>
+					<li><a href="resume.pdf" alt="Click here to view Mary's resume">Resume</a></li>
+					<li><a class="contact" href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+<!--BEGIN BIO SECTION-->
+		<div class="bio">	
+			<p>
+				Mary Luke (b. 1991) currently lives and works in Connecticut. Luke received her BFA in Painting at Syracuse University in 2014. Her works have been exhibited in galleries such as XL Projects and 914Works (Syracuse, NY), Arch Enemy Arts (Philadelphia, PA), the Slater Memorial Art Museum (Norwich, CT) and the Westport Arts Center (Westport, CT). Luke merges existentialist theories and the human figure in her often larger than life mixed-media works.  </p>
+			<img src="images/gallery/ME_unttld_3_copy.jpg"></img>
+			<h2>Artist Statement</h2>
+			<p>
+				Originally based in traditional figure painting, my work has evolved from years of philosophical studies, artistic experiments, and personal existential crises - all of which remove the (ironically) lifelessness I find in much realist art. When this lens is removed, only gesture and raw material are left. Though the literal representation of "Person" is absent, the consciousness of what is universally human is more present than ever. I work with a variety of materials - from the traditional: (oil paint, charcoal) to the less traditional: (studio debris, leaves, nails, dust - byproducts of elder artwork). When combined, these materials spark life in what would normally be perceived as a cold, un-breathing object - at least temporarily. While a painting comes to life, it should expect death, as every organism has before it. I have no desire to halt that natural process - one day my paintings will decay, they will become crippled, or they will be regurgitated, giving birth to something new. This art life cycle is vital to my work.</p>
+		</div>
+<!--BEGIN CONTACT SECTION-->
+		<div class="contact">
+			<div id="content">
+				<div id="page-wrap">
+					<div id="contact-area">		
+						<form method="post" action="contactengine.php">
+							<label for="Name">Name:</label>
+							<input type="text" name="Name" id="Name" required placeholder="Enter a name"/>
+							
+							<label for="City">City:</label>
+							<input type="text" name="City" id="City" required placeholder="Enter a city"/>
+				
+							<label for="Email">Email:</label>
+							<input type="email" name="Email" id="Email" required placeholder="Enter a valid email address"/>
+							
+							<label for="Message">Message:</label>
+							<textarea name="Message" rows="20" cols="20" id="Message" required placeholder="Enter a message"></textarea>
+
+							<input type="submit" name="submit" value="Submit" class="submit-button" />
+						</form>	
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				<img src="images/gallery/PTG_2016_unttld_1_copy.jpg"></img>
+			</div>
+		</div>
+<!--BEGIN GALLERY SECTION-->
+		<div class="gallery">
+		<button class="next">↠</button>
+		<button class="previous">↞</button>		
+			<div class="container">
+				<div style="display: inline-block;">
+					<a title='' class="lb_test">
+						<img src="images/gallery/ME_unttld_2_copy.jpg"></img>
+					</a>
+						<p>
+							<span> </span>
+							<span> </span>
+							<span> </span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/PTG_2017_SelfDestructionTrip.jpg"></img>
+					</a>
+						<p>
+							<span>Self Destruction,</span>(2017) 60" x 90"
+							<span>Mixed media on Canvas</span>
+							<span> </span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/ptg_17_ylwblu_figure.png"></img>
+					</a>
+						<p>
+							<span>Untitled, </span>(2017)
+							<span>Oil on canvas</span>
+							<span> </span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/PTG_Portrait_feb2017.jpg"></img>
+					</a>
+						<p>
+							<span>Self Portrait, </span>(2017) 19" x 25"
+							<span>Oil on canvas</span>
+							<span> </span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/PTG_2017_Monster.jpg"></img>
+					</a>
+						<p>
+							<span>Monster, </span>(2017)
+							<span>Mixed media on canvas</span>
+							<span> </span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/PTG_2016_unttld_2_copy.jpg"></img>
+					</a>
+						<p> 
+							<span>Untitled, </span>(2016) 50" x 85"
+							<span>Mixed media on canvas</span>
+							<span>photo credit: <a target="_blank" href=http://www.jakedipietro.com>Jake Di Pietro</a></span>
+
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/PTG_2016_unttld_1.jpg"></img>
+					</a>
+						<p>
+							<span>Untitled, </span>(2016) 50" x 40"
+							<span>Acrylic and charcoal on canvas</span>
+							<span>photo credit: <a target="_blank" href=http://www.jakedipietro.com>Jake Di Pietro</a></span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/ptg_2017_untld1.jpg"></img>
+					</a>
+						<p>
+							<span>Flesh, </span>(2016) 50" x 40"
+							<span>Mixed media on canvas</span>
+							<span>photo credit: <a target="_blank" href=http://www.jakedipietro.com>Jake Di Pietro</a></span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/2PTG_2016_diptych.jpg"></img>
+					</a>
+						<p>
+							<span>Untitled, </span>Diptych (2016) L: 50x30" R: 54x30"
+							<span>Acrylic, mixed media on canvas</span>
+							<span>photo credit: <a target="_blank" href=http://www.jakedipietro.com>Jake Di Pietro</a></span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/PTG_2016_Diptych_1_new.png"></img>
+					</a>
+						<p>
+							<span>Somebody, </span>(2016) 50" x 40"
+							<span>Oil on canvas</span>
+							<span></span>
+						</p>
+				</div>
+		</div>
+		<div> 
+					<a title='Social' target="_blank" display="none"class="social-link" href="https://www.instagram.com/mary_c_luke">
+						<img src="images/gallery/instSM.png"></img>
+					</a>
+				</div>
+    
