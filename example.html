@@ -24,12 +24,7 @@
 		$(document).ready(function(){
 			<!--Done Loading-->
 			console.log("Welcome to Mary Luke Artwork");
-			console.log("Thanks for your submission. Will be in touch!");
-//BEGIN HIDE BIO/CONTACT/Submit Thanks Message ON PAGELOAD
-			$("div.thanksmessage").fadeOut( 3000, function() {
-				$("div.thanksmessage").hide()
-    // Animation complete.
-  });
+//BEGIN HIDE BIO/CONTACT ON PAGELOAD
 			$("div.bio,div.contact").hide();
 			$("a.gallery").addClass("active")
 //////////////////////////////////////////
@@ -39,6 +34,7 @@
 			$("a.gallery").click(function(e){
 				$("div.bio,div.contact").hide();
 				$("div.gallery").show();
+				$(this).addClass("active"); 
 				$("a.bio,a.contact").removeClass("active"); 
 			})
 //BEGIN DISPLAY BIO SECTION ON NAV CLICK
@@ -118,7 +114,6 @@
 					<li><a class="contact" href="#">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="thanksmessage">Thanks for your submission!</div>
 		</header>
 <!--BEGIN BIO SECTION-->
 		<div class="bio">	
@@ -127,20 +122,14 @@
 			<img src="images/gallery/ME_unttld_3_copy.jpg"></img>
 			<h2>Artist Statement</h2>
 			<p>
-				I prefer working with raw, unstretched - or haphazardly stretched - canvas, combining oil paint, wood, plaster and regurgitated scraps of demolished artwork.  </p>
-			<p>
-				I draw inspiration from my studies in existentialism. John Sartre plays an integral part in the production of my work, pairing well with my strongest artist influences, including Anselm Kiefer, Francis Bacon, Kathe Kollwitz, and Egon Schiele. Painting intangible concepts such as existence, life, death, consciousness, etc. creates such a gravitational pull - one that unites us all through a unique combination of terror and comfort. </p>
-			<p>
-				Mortality is an ongoing theme in my work - both conceptually and literally; my paintings tend to be non-archival and must - as we all must -inevitably die. They will decay, rot, what have you, and return to the natural world as they came. And that's the beauty. There is no iconic or "larger than life" aspect to my work; it is just as fragile and temporary as anything else. The biggest tragedy I can imagine is that my paintings ever be denied death - mummified in varnish and suffocated behind conservation glass...kept alive on "art life support" so to speak. As if IT actually matters. </p>
-			<p>
-				Physicality is not a prerequisite for existence or purpose.</p>
+				Originally based in traditional figure painting, my work has evolved from years of philosophical studies, artistic experiments, and personal existential crises - all of which remove the (ironically) lifelessness I find in much realist art. When this lens is removed, only gesture and raw material are left. Though the literal representation of "Person" is absent, the consciousness of what is universally human is more present than ever. I work with a variety of materials - from the traditional: (oil paint, charcoal) to the less traditional: (studio debris, leaves, nails, dust - byproducts of elder artwork). When combined, these materials spark life in what would normally be perceived as a cold, un-breathing object - at least temporarily. While a painting comes to life, it should expect death, as every organism has before it. I have no desire to halt that natural process - one day my paintings will decay, they will become crippled, or they will be regurgitated, giving birth to something new. This art life cycle is vital to my work.</p>
 		</div>
 <!--BEGIN CONTACT SECTION-->
 		<div class="contact">
 			<div id="content">
 				<div id="page-wrap">
 					<div id="contact-area">		
-						<form method="post" action="contactengine.php">
+						<form action="http://formspree.io/mcluke1202@gmail.com" method="POST">
 							<label for="Name">Name:</label>
 							<input type="text" name="Name" id="Name" required placeholder="Enter a name"/>
 							
@@ -168,21 +157,31 @@
 			<div class="container">
 				<div style="display: inline-block;">
 					<a title='' class="lb_test">
-						<img src="images/gallery/ptg_207_untitled_triptych.png"></img>
-					</a>
-						<p>
-							<span>Untitled (triptych), </span>(2017) 60" x 90"
-							<span>Oil, mixed media on canvas</span>
-							<span> </span>
-						</p>
-				</div>
-				<div>
-					<a title='' class="lb_test">
 						<img src="images/gallery/ME_unttld_2_copy.jpg"></img>
 					</a>
 						<p>
 							<span> </span>
 							<span> </span>
+							<span> </span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/kittehs.jpg"></img>
+					</a>
+						<p>
+							<span>GitHub Test,</span>(YEAR) 20" x 30"
+							<span>Text on HTML</span>
+							<span>CC. James</span>
+						</p>
+				</div>
+				<div>
+					<a title='' class="lb_test">
+						<img src="images/gallery/PTG_2017_SelfDestructionTrip.jpg"></img>
+					</a>
+						<p>
+							<span>Self Destruction,</span>(2017) 60" x 90"
+							<span>Mixed media on Canvas</span>
 							<span> </span>
 						</p>
 				</div>
@@ -208,10 +207,10 @@
 				</div>
 				<div>
 					<a title='' class="lb_test">
-						<img src="images/gallery/CUNT.jpg"></img>
+						<img src="images/gallery/PTG_2017_Monster.jpg"></img>
 					</a>
 						<p>
-							<span>Chatte Monstre, </span>(2017)
+							<span>Monster, </span>(2017)
 							<span>Mixed media on canvas</span>
 							<span> </span>
 						</p>
@@ -239,7 +238,7 @@
 				</div>
 				<div>
 					<a title='' class="lb_test">
-						<img src="images/gallery/PTG_2016_unttld_3_copy.png"></img>
+						<img src="images/gallery/ptg_2017_untld1.jpg"></img>
 					</a>
 						<p>
 							<span>Flesh, </span>(2016) 50" x 40"
@@ -264,16 +263,6 @@
 						<p>
 							<span>Somebody, </span>(2016) 50" x 40"
 							<span>Oil on canvas</span>
-							<span></span>
-						</p>
-				</div>
-				<div>
-					<a title='' class="lb_test">
-						<img src="images/gallery/PTG_2016_skin_3.png"></img>
-					</a>
-						<p>
-							<span>Skin, </span>(2016) 60" x 60"
-							<span>Oil, charcoal, acrylic, misc. on canvas</span>
 							<span></span>
 						</p>
 				</div>
