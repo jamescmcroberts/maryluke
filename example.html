@@ -135,9 +135,9 @@
 							<label for="Phone">Phone #:</label>
 								<input type="tel" name="Phone" id="Phone" placeholder="Enter a phone number:" />
 							<label for="Occupation">Occupation:</label>
-								<input type="checkbox" name="Occupation" value="Tech">Tech</input>
-								<input type="checkbox" name="Occupation" value="Art" checked>Art</input>
-								<input type="checkbox" name="Occupation" value="Other" />Other</input>
+								<input id="special-input" type="checkbox" name="Occupation" value="Tech">Tech</input>
+								<input id="special-input" type="checkbox" name="Occupation" value="Art" checked>Art</input>
+								<input id="special-input" type="checkbox" name="Occupation" value="Other" />Other</input>
 							<label for="City">City:</label>
 								<input type="text" name="City" id="City" required placeholder="Enter a city"/>
 							<label for="Email">Email:</label>
@@ -145,8 +145,8 @@
 							<label for="Message">Message:</label>
 								<textarea name="Message" rows="20" cols="20" id="Message" required placeholder="Enter a message"></textarea>
 							<label for="Preference">Preferred Contact Method:</label>	
-								<input type="radio" value="Phone" id="Phone" name="Preference">Phone</input> 
-								<input type="radio" value="Email" id="Email" name="Preference">Email</input>	
+								<input type="radio" id="special-input" value="Phone" id="Phone" name="Preference">Phone</input> 
+								<input type="radio" id="special-input" value="Email" id="Email" name="Preference">Email</input>	
 							<input type="submit" name="submit" value="Submit" class="submit-button" />
 						</form>	
 						<div style="clear: both;"></div>
