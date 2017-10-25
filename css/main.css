@@ -475,7 +475,7 @@ label {
 }
 
 /*radio and checkbox styling
-#contact-area form input[type="checkbox"], #contact-area form input[type="radio"]{
+#contact-area #special-input{
     width:20px;
     font-size:12px;
 }
