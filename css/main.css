@@ -467,7 +467,8 @@ input:focus,textarea:focus{
 label {
     display:block;
     text-align: left;
-    width: 100px;
+    min-width: 100px;
+    width:100%;
     padding-top: 5px;
     padding-left:13px;
     font-size: 1.4em;
