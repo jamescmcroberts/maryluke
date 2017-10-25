@@ -71,7 +71,7 @@ textarea {
 /*---------START---------*/ 
 /*-----MEDIA QUERIES-----*/
 /*-----------------------*/ 
-@media screen and (max-width:2000px){/*updated to 2000 for mobile view across all viewports*/
+@media screen and (max-width:3000px){/*updated to 2000 for mobile view across all viewports*/
     html header h1 {width:100%;margin:0;margin-bottom:25px;}
     body{margin-top:50px;}
     html header nav{text-align:center;}
