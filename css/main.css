@@ -477,9 +477,9 @@ label {
 /*radio and checkbox styling*/
 #contact-area form label#special-input{
     font-size:12px;
+     display:inline;
 }
 
 #contact-area form label#special-input input{
     width:20px;
-    display:inline;
 }
