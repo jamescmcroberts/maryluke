@@ -473,3 +473,9 @@ label {
     padding-left:13px;
     font-size: 1.4em;
 }
+
+/*radio and checkbox styling
+#contact-area form input[type="radio"], #contact-area form input[type="checkbox"] {
+    width:20px;
+    font-size:12px;
+}
