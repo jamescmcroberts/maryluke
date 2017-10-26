@@ -25,32 +25,40 @@
 			<!--Done Loading-->
 			console.log("Welcome to Mary Luke Artwork");
 //BEGIN HIDE BIO/CONTACT ON PAGELOAD
-			$("div.bio,div.contact").hide();
+			$("div.bio,div.contact,div.resume").hide();
 			$("a.gallery").addClass("active")
 //////////////////////////////////////////
 //				Nav Clicks 				//
 //////////////////////////////////////////
 //BEGIN DISPLAY GALLERY SECTION ON NAV CLICK
 			$("a.gallery").click(function(e){
-				$("div.bio,div.contact").hide();
+				$("div.bio,div.contact,div.resume").hide();
 				$("div.gallery").show();
 				$(this).addClass("active"); 
-				$("a.bio,a.contact").removeClass("active"); 
+				$("a.bio,a.contact,a.resume").removeClass("active"); 
 			})
 //BEGIN DISPLAY BIO SECTION ON NAV CLICK
 			$("a.bio").click(function(e){
-				$("div.gallery,div.contact").hide();
+				$("div.gallery,div.contact,div.resume").hide();
 				$("div.bio").show();
 				$(this).addClass("active"); 
-				$("a.gallery,a.contact").removeClass("active"); 
+				$("a.gallery,a.contact,a.resume").removeClass("active"); 
 			})
 //BEGIN DISPLAY CONTACT SECTION ON NAV CLICK
 			$("a.contact").click(function(e){
-				$("div.gallery,div.bio").hide();
+				$("div.gallery,div.bio,div.resume").hide();
 				$("div.contact").show();
 				$(this).addClass("active"); 
-				$("a.gallery,a.bio").removeClass("active"); 
+				$("a.gallery,a.bio,a.resume").removeClass("active"); 
 			})
+//BEGIN DISPLAY RESUME SECTION ON NAV CLICK
+			$("a.resume").click(function(e){
+				$("div.gallery,div.contact,div.bio").hide();
+				$("div.resume").show();
+				$(this).addClass("active");
+				$("a.gallery,a.contact,a.bio").removeClass("active");
+			})
+
 //BEGIN IMAGE CAROUSEL VARIABLES
 	var currentIndex = 0,
 	items = $('.container div'),
@@ -110,7 +118,7 @@
 				<ul class="main-nav">
 					<li><a class="gallery" href="#">Gallery</a></li>
 					<li><a class="bio" href="#">Artist Bio</a></li>
-					<li><a href="resume.pdf" alt="Click here to view Mary's resume">Resume</a></li>
+					<li><a class="resume" href="#">Resume</a></li>
 					<li><a class="contact" href="#">Contact</a></li>
 				</ul>
 			</nav>
@@ -146,6 +154,12 @@
 				<img src="images/gallery/PTG_2016_unttld_1_copy.jpg"></img>
 			</div>
 		</div>
+<!--BEGIN RESUME EMBED SECTION-->
+		<div class="resume">
+			<img src="/images/Resume.png"></img>
+ </div>
+		</div>
+
 <!--BEGIN GALLERY SECTION-->
 		<div class="gallery">
 		<button class="next">↠</button>
