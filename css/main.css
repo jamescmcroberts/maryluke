@@ -485,7 +485,5 @@ label {
 }
 
 /*PDF Embed Specs*/
-div.resume {
-    max-width:100%;
-}
+div.resume img{max-width:100%;}
 
